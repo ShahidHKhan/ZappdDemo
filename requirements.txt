@@ -1,0 +1,10 @@
+# Why each dependency is here:
+anthropic        # official Claude SDK - the only way we talk to the LLM
+pydantic>=2      # typed data models + validation; also generates JSON schemas for the LLM
+fastapi          # REST API for outside callers (built on Pydantic)
+uvicorn          # the web server that actually runs the FastAPI app
+rapidfuzz        # fast fuzzy string matching ("LG FRY" ~ "Large Fries")
+mcp>=2           # Model Context Protocol SDK - exposes our tools to AI agents (Claude Desktop/Code)
+python-dotenv    # loads ANTHROPIC_API_KEY from .env so it never lives in code
+pytest           # tests
+httpx            # used by FastAPI's TestClient in tests

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "burger_doneness_required",
+    "type": "require_group",
+    "applies_to_tags": ["beef"],
+    "group_id": "doneness",
+    "question": "How would you like your burger cooked: medium rare, medium, or well done?",
+    "note": "POS marks doneness optional, but the kitchen won't fire a beef patty without it. Every cashier asks."
+  },
+  {
+    "id": "breakfast_hours",
+    "type": "time_window",
+    "applies_to_tags": ["breakfast"],
+    "start": "06:00",
+    "end": "11:00",
+    "note": "Grill switches over to lunch at 11. Breakfast items are not orderable after that."
+  },
+  {
+    "id": "shake_machine_down",
+    "type": "sold_out",
+    "applies_to_tags": ["shake"],
+    "active": true,
+    "note": "Shake machine is down (again). Manager flips this to false when it's fixed."
+  },
+  {
+    "id": "tuesday_combo_deal",
+    "type": "promotion",
+    "applies_to_tags": ["combo"],
+    "weekdays": [1],
+    "discount_cents": 100,
+    "note": "$1 off every combo on Tuesdays (weekday 1 = Tuesday, Monday is 0)."
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "store": "Bolt Burger (Downtown)",
+  "products": [
+    {"product_name": "Bolt Classic Burger", "unit_price_cents": 1099},
+    {"product_name": "Double Bolt Burger", "unit_price_cents": 1399},
+    {"product_name": "Crispy Chicken Sandwich", "unit_price_cents": 1049},
+    {"product_name": "French Fries (Regular)", "unit_price_cents": 449},
+    {"product_name": "Coke", "unit_price_cents": 349},
+    {"product_name": "Chocolate Shake", "unit_price_cents": 699}
+  ]
+}

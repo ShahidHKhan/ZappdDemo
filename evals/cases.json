@@ -1,0 +1,67 @@
+[
+  {"id": "simple_burger", "text": "can i get a bolt classic medium with no onions",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "bolt_classic", "quantity": 1, "modifier_ids": ["doneness_medium", "no_onions"]}],
+   "expected_issue_codes": []},
+
+  {"id": "two_number_threes", "text": "2 number 3s no pickles, one w/ a coke and one with sprite, both w fries",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [
+     {"item_id": "combo_3", "quantity": 1, "modifier_ids": ["no_pickles"],
+      "combo_choices": [{"slot": "side", "item_id": "fries_regular"}, {"slot": "drink", "item_id": "coke"}]},
+     {"item_id": "combo_3", "quantity": 1, "modifier_ids": ["no_pickles"],
+      "combo_choices": [{"slot": "side", "item_id": "fries_regular"}, {"slot": "drink", "item_id": "sprite"}]}],
+   "expected_issue_codes": []},
+
+  {"id": "missing_doneness", "text": "a double bolt and a large fry",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "double_bolt", "quantity": 1}, {"item_id": "fries_large", "quantity": 1}],
+   "expected_issue_codes": ["MISSING_REQUIRED_MODIFIER"]},
+
+  {"id": "combo_missing_drink", "text": "#1 combo well done with onion rings",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "combo_1", "quantity": 1, "modifier_ids": ["doneness_well"],
+                       "combo_choices": [{"slot": "side", "item_id": "onion_rings"}]}],
+   "expected_issue_codes": ["INCOMPLETE_COMBO"]},
+
+  {"id": "sold_out_shake", "text": "chocolate shake pls",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "chocolate_shake", "quantity": 1}],
+   "expected_issue_codes": ["ITEM_UNAVAILABLE"]},
+
+  {"id": "breakfast_after_11", "text": "breakfast burrito",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "breakfast_burrito", "quantity": 1}],
+   "expected_issue_codes": ["ITEM_UNAVAILABLE"]},
+
+  {"id": "breakfast_morning_oat_latte", "text": "breakfast burrito and an oat milk latte",
+   "now": "2026-11-18T08:30",
+   "expected_lines": [{"item_id": "breakfast_burrito", "quantity": 1}, {"item_id": "latte", "quantity": 1, "modifier_ids": ["milk_oat"]}],
+   "expected_issue_codes": []},
+
+  {"id": "not_on_menu", "text": "one pepperoni pizza and a coke",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "coke", "quantity": 1}],
+   "expected_issue_codes": [], "expect_not_on_menu": true},
+
+  {"id": "addons_slang", "text": "mushroom swiss med rare add bacon n cheese",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "mushroom_swiss", "quantity": 1, "modifier_ids": ["doneness_medium_rare", "add_bacon", "add_cheese"]}],
+   "expected_issue_codes": []},
+
+  {"id": "typos", "text": "dubble bolt burgr well don w/ avacado",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "double_bolt", "quantity": 1, "modifier_ids": ["doneness_well", "add_avocado"]}],
+   "expected_issue_codes": []},
+
+  {"id": "quantities", "text": "3 diet cokes and an iced tea",
+   "now": "2026-11-18T12:30",
+   "expected_lines": [{"item_id": "diet_coke", "quantity": 3}, {"item_id": "iced_tea", "quantity": 1}],
+   "expected_issue_codes": []},
+
+  {"id": "tuesday_combo", "text": "classic combo medium, rings, diet coke, no tomato no lettuce",
+   "now": "2026-11-17T12:30",
+   "expected_lines": [{"item_id": "combo_1", "quantity": 1, "modifier_ids": ["doneness_medium", "no_tomato", "no_lettuce"],
+                       "combo_choices": [{"slot": "side", "item_id": "onion_rings"}, {"slot": "drink", "item_id": "diet_coke"}]}],
+   "expected_issue_codes": []}
+]

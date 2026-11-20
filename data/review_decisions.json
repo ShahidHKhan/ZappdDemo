@@ -1,0 +1,7 @@
+{
+  "_comment": "What a human reviewer decided for records in review_queue.json. Key = source:source_id. Value = canonical id, or null to reject.",
+  "pos:1017": "combo_1",
+  "pos:1018": "combo_2",
+  "pos:1019": "combo_3",
+  "pos:1022": null
+}

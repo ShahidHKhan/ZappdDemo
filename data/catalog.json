@@ -1,0 +1,124 @@
+{
+  "location": {
+    "id": "bolt_burger_downtown",
+    "name": "Bolt Burger - Downtown",
+    "timezone": "America/New_York"
+  },
+  "modifier_groups": [
+    {
+      "id": "doneness",
+      "name": "Doneness",
+      "min_selections": 0,
+      "max_selections": 1,
+      "modifiers": [
+        {"id": "doneness_medium_rare", "name": "Medium Rare"},
+        {"id": "doneness_medium", "name": "Medium"},
+        {"id": "doneness_well", "name": "Well Done"}
+      ]
+    },
+    {
+      "id": "remove_toppings",
+      "name": "Remove toppings",
+      "min_selections": 0,
+      "max_selections": 4,
+      "modifiers": [
+        {"id": "no_pickles", "name": "No Pickles"},
+        {"id": "no_onions", "name": "No Onions"},
+        {"id": "no_lettuce", "name": "No Lettuce"},
+        {"id": "no_tomato", "name": "No Tomato"}
+      ]
+    },
+    {
+      "id": "burger_addons",
+      "name": "Add-ons",
+      "min_selections": 0,
+      "max_selections": 3,
+      "modifiers": [
+        {"id": "add_bacon", "name": "Add Bacon", "price_delta_cents": 150},
+        {"id": "add_cheese", "name": "Add Cheese", "price_delta_cents": 75},
+        {"id": "add_avocado", "name": "Add Avocado", "price_delta_cents": 125}
+      ]
+    },
+    {
+      "id": "milk_choice",
+      "name": "Milk",
+      "min_selections": 1,
+      "max_selections": 1,
+      "modifiers": [
+        {"id": "milk_whole", "name": "Whole Milk"},
+        {"id": "milk_oat", "name": "Oat Milk", "price_delta_cents": 75},
+        {"id": "milk_almond", "name": "Almond Milk", "price_delta_cents": 75}
+      ]
+    }
+  ],
+  "items": [
+    {"id": "bolt_classic", "name": "Bolt Classic Burger", "category": "burgers", "price_cents": 899,
+     "aliases": ["classic", "bolt burger", "cheeseburger", "hamburger"],
+     "tags": ["beef"], "modifier_group_ids": ["doneness", "remove_toppings", "burger_addons"]},
+    {"id": "double_bolt", "name": "Double Bolt Burger", "category": "burgers", "price_cents": 1149,
+     "aliases": ["double", "double burger"],
+     "tags": ["beef"], "modifier_group_ids": ["doneness", "remove_toppings", "burger_addons"]},
+    {"id": "mushroom_swiss", "name": "Mushroom Swiss Burger", "category": "burgers", "price_cents": 999,
+     "aliases": ["mushroom burger", "swiss"],
+     "tags": ["beef"], "modifier_group_ids": ["doneness", "remove_toppings", "burger_addons"]},
+    {"id": "crispy_chicken", "name": "Crispy Chicken Sandwich", "category": "sandwiches", "price_cents": 849,
+     "aliases": ["chicken sandwich", "chicken"],
+     "tags": [], "modifier_group_ids": ["remove_toppings", "burger_addons"]},
+
+    {"id": "fries_regular", "name": "Regular Fries", "category": "sides", "price_cents": 349,
+     "aliases": ["fries", "small fry", "fry"], "tags": [], "modifier_group_ids": []},
+    {"id": "fries_large", "name": "Large Fries", "category": "sides", "price_cents": 449,
+     "aliases": ["large fry", "big fries"], "tags": [], "modifier_group_ids": []},
+    {"id": "onion_rings", "name": "Onion Rings", "category": "sides", "price_cents": 429,
+     "aliases": ["rings"], "tags": [], "modifier_group_ids": []},
+
+    {"id": "coke", "name": "Coca-Cola", "category": "drinks", "price_cents": 249,
+     "aliases": ["coke", "cola"], "tags": [], "modifier_group_ids": []},
+    {"id": "diet_coke", "name": "Diet Coke", "category": "drinks", "price_cents": 249,
+     "aliases": ["diet"], "tags": [], "modifier_group_ids": []},
+    {"id": "sprite", "name": "Sprite", "category": "drinks", "price_cents": 249,
+     "aliases": ["lemon lime soda"], "tags": [], "modifier_group_ids": []},
+    {"id": "iced_tea", "name": "Iced Tea", "category": "drinks", "price_cents": 279,
+     "aliases": ["tea"], "tags": [], "modifier_group_ids": []},
+    {"id": "latte", "name": "Latte", "category": "drinks", "price_cents": 425,
+     "aliases": ["coffee", "latte"], "tags": [], "modifier_group_ids": ["milk_choice"]},
+
+    {"id": "vanilla_shake", "name": "Vanilla Shake", "category": "shakes", "price_cents": 549,
+     "aliases": ["vanilla milkshake"], "tags": ["shake"], "modifier_group_ids": []},
+    {"id": "chocolate_shake", "name": "Chocolate Shake", "category": "shakes", "price_cents": 549,
+     "aliases": ["chocolate milkshake", "choc shake"], "tags": ["shake"], "modifier_group_ids": []},
+
+    {"id": "breakfast_burrito", "name": "Breakfast Burrito", "category": "breakfast", "price_cents": 699,
+     "aliases": ["burrito"], "tags": ["breakfast"], "modifier_group_ids": []},
+    {"id": "egg_bacon_biscuit", "name": "Egg & Bacon Biscuit", "category": "breakfast", "price_cents": 549,
+     "aliases": ["biscuit", "egg biscuit"], "tags": ["breakfast"], "modifier_group_ids": []},
+
+    {"id": "combo_1", "name": "#1 Bolt Classic Combo", "category": "combos", "price_cents": 1299,
+     "aliases": ["number 1", "#1", "classic combo"], "tags": ["combo"], "modifier_group_ids": [],
+     "combo": {
+       "main_item_id": "bolt_classic",
+       "slots": [
+         {"name": "side", "allowed_item_ids": ["fries_regular", "onion_rings"]},
+         {"name": "drink", "allowed_item_ids": ["coke", "diet_coke", "sprite", "iced_tea"]}
+       ]
+     }},
+    {"id": "combo_2", "name": "#2 Double Bolt Combo", "category": "combos", "price_cents": 1499,
+     "aliases": ["number 2", "#2", "double combo"], "tags": ["combo"], "modifier_group_ids": [],
+     "combo": {
+       "main_item_id": "double_bolt",
+       "slots": [
+         {"name": "side", "allowed_item_ids": ["fries_regular", "onion_rings"]},
+         {"name": "drink", "allowed_item_ids": ["coke", "diet_coke", "sprite", "iced_tea"]}
+       ]
+     }},
+    {"id": "combo_3", "name": "#3 Crispy Chicken Combo", "category": "combos", "price_cents": 1199,
+     "aliases": ["number 3", "#3", "chicken combo"], "tags": ["combo"], "modifier_group_ids": [],
+     "combo": {
+       "main_item_id": "crispy_chicken",
+       "slots": [
+         {"name": "side", "allowed_item_ids": ["fries_regular", "onion_rings"]},
+         {"name": "drink", "allowed_item_ids": ["coke", "diet_coke", "sprite", "iced_tea"]}
+       ]
+     }}
+  ]
+}

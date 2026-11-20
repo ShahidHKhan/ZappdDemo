@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {"title": "The Bolt Classic", "price": "$8.99", "section": "Burgers"},
+    {"title": "Double Bolt", "price": "$11.49", "section": "Burgers"},
+    {"title": "Mushroom & Swiss", "price": "$9.49", "section": "Burgers"},
+    {"title": "Crispy Chicken Sammy", "price": "$8.49", "section": "Sandwiches"},
+    {"title": "Fries", "price": "$3.49", "section": "Sides"},
+    {"title": "Large Fries", "price": "$4.49", "section": "Sides"},
+    {"title": "Onion Rings", "price": "$4.29", "section": "Sides"},
+    {"title": "Coca-Cola", "price": "$2.49", "section": "Drinks"},
+    {"title": "Iced Tea", "price": "$2.79", "section": "Drinks"},
+    {"title": "Vanilla Milkshake", "price": "$5.49", "section": "Shakes"},
+    {"title": "Breakfast Burrito", "price": "$6.99", "section": "Breakfast"},
+    {"title": "Truffle Fries", "price": "$5.99", "section": "Sides"}
+  ]
+}
